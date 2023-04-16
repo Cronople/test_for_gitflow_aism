@@ -1,0 +1,43 @@
+gitflow 진행 단계
+
+main
+ㄴ develop branch
+    ㄴ feature branch
+
+각 단계에서 진행
+main: develop 단계에서 완성되고 안정된 기능을 최종적으로 반영하는 곳.
+        시연이나 제출에 쓰일 버전을 이 곳에 올리는 것
+
+develop: 기능 구현이 완료된 것들이 배치. main과 다른 것은, 문제가 없는지 파악을 하는 역할이 됨.
+        각자의 기능이 추가 / 삭제가 되는 곳이기에 비교적 난잡함.
+
+feature: 각 기능을 구현하기 위해 만들어지는 branch. 구현오류나 병합 오류를 여기서 가능한 처리를 하고 develop으로 보내야 함.
+        개발이 완료된 feature는 develop으로 병합 후에 삭제됨.
+    
+
+Git Convention
+
+| 태그 이름 | 설명 |
+| Feat | 새로운 기능을 추가할 경우 |
+| Fix | 버그를 고친 경우 |
+| Design | CSS 등 사용자 UI 디자인 변경 |
+| !BREAKING CHANGE | 커다란 API 변경의 경우 |
+| Style | 코드 포맷 변경, 세미 콜론 누락, 코드 수정이 없는 경우 |
+| Refactor | 프로덕션 코드 리팩토링 |
+| Comment | 필요한 주석 추가 및 변경 |
+| Docs | 문서를 수정한 경우 |
+| Test | 테스트 추가, 테스트 리팩토링(프로덕션 코드 변경 X) |
+| Chore | 빌드 태스트 업데이트, 패키지 매니저를 설정하는 경우(프로덕션 코드 변경 X) |
+| Rename | 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 |
+| Remove | 파일을 삭제하는 작업만 수행한 경우 |
+
+[https://overcome-the-limits.tistory.com/entry/협업-협업을-위한-기본적인-git-커밋컨벤션-설정하기](https://overcome-the-limits.tistory.com/entry/%ED%98%91%EC%97%85-%ED%98%91%EC%97%85%EC%9D%84-%EC%9C%84%ED%95%9C-%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-git-%EC%BB%A4%EB%B0%8B%EC%BB%A8%EB%B2%A4%EC%85%98-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)
+
+[Plus Ultra]
+
+위 유형들이 `**복합적으로 포함**`되어 있는 경우, 되도록 커밋을 분리한다. **`분리가 어려운 경우`**에는 위 순서 상 상위 항목의 유형으로 작성한다. (예: 기능과 테스트가 모두 포함된 경우 [feat] 으로 작성)
+
+4**. 제목은 `개조식 구문으로 작성`한다**
+
+- ex) **`[feat] 도서 검색 기능 추가"`**
+- 명령문으로 작성할 필요 없다. (필요시 추가)
